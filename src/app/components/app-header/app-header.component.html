@@ -1,0 +1,12 @@
+<div class="app-header">
+  <div class="wrapper">
+    {{ user | json }}
+    <div
+      class="app-header__user-info"
+      *ngIf="user?.authenticated"
+      (click)="logoutUser()"
+    >
+      <span></span>
+    </div>
+  </div>
+</div>

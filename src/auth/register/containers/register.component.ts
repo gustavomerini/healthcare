@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
     const { email, password } = event.value;
     try {
       await this.authService.createUser(email, password);
-      this.router.navigate(["/login"]);
+      this.router.navigate(["auth/login"]);
     } catch (err) {
       this.error = err.message;
     }
